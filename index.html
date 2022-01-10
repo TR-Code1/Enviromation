@@ -5,85 +5,40 @@
     <title>Enviromation - Homepage</title>
     <link rel = "icon" href = "favicon.ico">
     <style>
-      .motto {
-      position: relative;
-        max-width: 640px;
-        text-align: center;
-        height: 200px;
-        line-height: 200px;
-        margin: 20px auto;
-        background: #e41b17;
-        border-radius: 6px;
-        color: #fff;
-        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
-      }
-
-      .phrase {
-        font-size:3em;
-        font-weight:bold;
-        opacity:0;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-}
-  @keyframes p1anim {
-    0%{
-    opacity: 0;
-    }
-    10%{
-    opacity: 1;
-    }
-    20% {
-    opacity:0;
-    }
+      #spin {
+    color: rgb(133,139, 212);
+    font-family: Verdana;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  #spin:after {
+    content:"";
+    animation: spin 7s linear infinite;
+    animation-timing-function: ease-in-out;
   }
 
-@keyframes p2anim {
-  20%{
-    opacity: 0;
+  @keyframes spin {
+  0% {
+    content: "land free from litter."
   }
-  30%{
-    opacity: 1;
-  }
-  40% {
-    opacity:0;
-  }
-}
 
-@keyframes p3anim {
-  40%{
-    opacity: 0;
+25% {
+    content: "ocean free from plastic."
   }
-  50%{
-    opacity: 1;
+
+  50% {
+    content: "air free from pollution."
   }
-  60% {
-    opacity:0;
+
+  100% {
+    content: "spirit alive."
   }
-}
-
-  .phrase-1 {
-  -webkit-animation: p1anim 20s infinite;
-          animation: p1anim 20s infinite;
-}
-
-.phrase-2 {
-  -webkit-animation: p2anim 20s infinite;
-          animation: p2anim 20s infinite;
-}
-
-.phrase-3 {
-  -webkit-animation: p3anim 20s infinite;
-          animation: p3anim 20s infinite;
 }
       </style>
   </head>
   <body>
     <h1> Enviromation </h1>
-    <div class = "motto">
-      <div class = "phrase phrase-1"> I will keep the Earth's land free of litter. </div>
-      <div class = "phrase phrase-2"> I will keep the Earth's oceans free of plastic. </div>
-      <div class = "phrase phrase-3"> I will keep the Earth's air free from pollution. </div>
-    </div>
+    <p style="font-family:Verdana; font-size:50px; text-align: center;"> I will keep the Earth's <span id = "spin"> </span> </p>
   </body>
 </html>
